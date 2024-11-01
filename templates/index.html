@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>词云生成器</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">词云生成器</h1>
+        <form id="wordcloud-form" enctype="multipart/form-data">
+            <label for="words">输入词语（无需引号&&需用英文逗号分隔）：</label>
+            <textarea id="words" name="words" placeholder="请输入词语，用逗号分隔" required></textarea>
+
+            <label for="font" class="file-upload" id="font-label">
+                选择字体文件 (.ttf)
+                <input type="file" id="font" name="font" accept=".ttf" required hidden>
+            </label>
+
+            <label for="mask" class="file-upload" id="mask-label">
+                选择形状图片 (.png)
+                <input type="file" id="mask" name="mask" accept=".png" required hidden>
+            </label>
+
+            <button type="submit" class="generate-btn">生成词云</button>
+        </form>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
